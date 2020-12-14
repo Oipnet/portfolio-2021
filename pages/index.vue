@@ -1,6 +1,26 @@
 <template>
   <div>
     <forelse-hero />
+    <section id="about">
+      <h2>Qui suis-je</h2>
+      <div class="about-container">
+        <figure>
+          <img src="@/assets/hero.jpg" alt="">
+        </figure>
+        <div class="about-description">
+          <p>Devoloppeur WEB depuis plus de 10 ans</p>
+          <p>
+            Après avoir passé un IUT informatique sur lyon (<a href="https://iut.univ-lyon1.fr/formation/offre-de-formations/informatique-bourg-en-bresse/dut-informatique" target="_blank">IUT Lyon 1</a>) j'ai posé mais valises dans le Sud-Gironde
+          </p>
+          <p>
+            Indépendant passioné, j'ai a coeur de réalisé un travail de qualité et a jours. Pour cela je reste a l'écoute des nouvelles avancées technologiques
+          </p>
+          <p>
+            Formateur, j'aime transmettre mes connaissance au travers de formations sur les technologies que j'utilise au quotidien (<a href="https://symfony.com/" target="_blank">Symfony</a>, <a href="https://laravel.com/" target="_blank">Laravel</a>, <a href="https://vuejs.org/" target="_blank">Vue.js</a>)
+          </p>
+        </div>
+      </div>
+    </section>
     <section id="services" class="services">
       <h2>Augmenter votre visibilité sur le web</h2>
       <div class="services-container">
@@ -9,6 +29,7 @@
     </section>
     <section>
       <h2>Mes dernières réalisation</h2>
+      <p style="text-align:center">Section en cours de réalisation</p>
     </section>
     <section id="testimonials">
       <h2>Ils m'ont fait confiance</h2>
@@ -85,42 +106,47 @@ export default {
     flex-wrap: wrap;
   }
 
-  .service {
-    text-align: center;
-    min-height: 250px;
+  .about-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    text-align: center;
   }
 
-  .learn-more {
-    display: block;
-    background-color: var(--primary-color);
-    margin: 1.5em;
-    padding: 1em 1.5em;
-    color: #fff;
-    border-radius: 12px;
-    transition: opacity var(--fast-transition-time), color var(--fast-transition-time);
+  .about-container p {
+    margin: 1em 0;
   }
 
-  .learn-more:hover {
-    opacity: .8;
+  .about-container img {
+    margin: 2em auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+  }
+
+  .about-description a {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  .about-description a:hover {
     color: var(--secondary-color)
   }
-
   @media screen and (min-width: 680px) {
-    .service {
-      flex: 50%;
-    }
-
     .services-container {
       flex-direction: row;
     }
-  }
 
-  @media screen and (min-width: 1200px) {
-    .service {
+    .about-container {
+      flex-direction: row;
+      min-height: 180px;
+    }
+
+    .about-container figure {
       flex: 33%;
+    }
+
+    .about-description {
+      padding: 1.5em;
     }
   }
 </style>
