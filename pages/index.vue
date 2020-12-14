@@ -31,6 +31,13 @@
       <h2>Mes dernières réalisation</h2>
       <p style="text-align:center">Section en cours de réalisation</p>
     </section>
+    <section id="phone-contact" class="phone-contact">
+      <span>Laissez moi votre numéro, je vous rappèle</span>
+      <form>
+        <input type="phone" placeholder="Téléphone">
+        <input type="submit" value="Envoyer">
+      </form>
+    </section>
     <section id="testimonials">
       <h2>Ils m'ont fait confiance</h2>
       <div class="testimonials" v-for="testimonial in testimonials" :key="testimonial.id">
@@ -131,6 +138,40 @@ export default {
   .about-description a:hover {
     color: var(--secondary-color)
   }
+
+  .phone-contact {
+    margin: 0 -2em;
+    padding: 1.5em;
+    min-height: 200px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .phone-contact span {
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin: 1em;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  .phone-contact form {
+    margin: 1em;
+  }
+
+  .phone-contact form input[type='phone'] {
+    border: none;
+    border-radius: 5px;
+    padding: 1em 2em;
+  }
+  .phone-contact form input[type='submit'] {
+    background-color: var(--light-primary-color);
+    border: none;
+    border-radius: 5px;
+    padding: 1em 2em;
+  }
   @media screen and (min-width: 680px) {
     .services-container {
       flex-direction: row;
@@ -147,6 +188,22 @@ export default {
 
     .about-description {
       padding: 1.5em;
+    }
+
+    .phone-contact {
+      flex-direction: row;
+    }
+
+    .phone-contact form {
+      flex: 45%;
+    }
+
+    .phone-contact input {
+      margin-bottom: 0.5em;
+    }
+
+    .phone-contact input[type="submit"] {
+      text-align: right;
     }
   }
 </style>
