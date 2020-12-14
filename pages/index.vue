@@ -4,28 +4,7 @@
     <section id="services" class="services">
       <h2>Augmenter votre visibilité sur le web</h2>
       <div class="services-container">
-        <div class="service">
-          <h3>Conception</h3>
-          <p>
-            Je vous accompagne afin de concretiser votre projet.
-            Vous avez une idée, je peux alors la concretiser et vous proposer la solution technique la plus adaptée a votre besoin.
-          </p>          
-          <a href="#" class="learn-more">En savoir plus</a>
-        </div>
-        <div class="service">
-          <h3>Création</h3>
-          <p>
-            Je réalise le dévoloppement ainsi que la ise en ligne de votre projet.
-          </p>
-          <a href="#" class="learn-more">En savoir plus</a>
-        </div>
-        <div class="service">
-          <h3>Audit</h3>
-          <p>
-            Je peux analyser le code source de votre solution afin de voir plus clair sur la qualité de votre produit
-          </p>
-          <a href="#" class="learn-more">En savoir plus</a>
-        </div>
+        <forelse-service v-for="service in services" :service="service" :key="service.id"/>
       </div>
     </section>
     <section>
@@ -68,6 +47,23 @@ export default {
             alt: ''
           },
           content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque labore unde dolor nesciunt neque ipsa hic dolores. Sed architecto quos adipisci, culpa in veritatis, corrupti commodi est, ratione facilis veniam!'
+        }
+      ],
+      services: [
+        {
+          id: 1,
+          title: 'Conception',
+          content: 'Je vous accompagne afin de concretiser votre projet.\nVous avez une idée, je peux alors la concretiser et vous proposer la solution technique la plus adaptée a votre besoin.'
+        },
+        {
+          id: 2,
+          title: 'Création',
+          content: 'Je réalise le dévoloppement ainsi que la mise en ligne de votre projet.'
+        },
+        {
+          id: 3,
+          title: 'Audit',
+          content: 'Je peux analyser le code source de votre solution afin de voir plus clair sur la qualité de votre produit.'
         }
       ]
     }
