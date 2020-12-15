@@ -52,6 +52,7 @@ export default {
     background-color: #fff;
     z-index: 999;
     overflow: hidden;
+    width: 0;
   }
   .navbar.open nav {
     transform: translateX(0);
@@ -82,6 +83,7 @@ export default {
       transform: translateX(0);
       top: 0;
       height: var(--navbar-height);
+      width: auto;
     }
 
     .navbar-item {
