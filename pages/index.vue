@@ -32,7 +32,7 @@
       <p style="text-align:center">Section en cours de réalisation</p>
     </section>
     <section id="phone-contact" class="phone-contact">
-      <span>Laissez moi votre numéro, je vous rappèle</span>
+      <span>Laissez moi votre numéro, je vous rappelle</span>
       <form>
         <input type="phone" placeholder="Téléphone">
         <input type="submit" value="Envoyer">
